@@ -15,7 +15,7 @@ spec:
       containers:
         - name: vfm-lucid
           image: ashutandle/vfm-lucid:latest # Image that will be used to containers in the cluster
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always # Fix: use Always if you want latest to actually be latest
           ports:
             - containerPort: 8070 # The port that the container is running on in the cluster
 
