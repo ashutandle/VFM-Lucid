@@ -68,7 +68,7 @@ pipeline {
         stage('build and Tag docker image') {
             steps {
                 script {
-                        sh "docker build -t ashutandle/ekart:latest -f docker/Dockerfile ."
+                        sh "docker build -t ashutandle/VFM-Lucid:latest -f docker/Dockerfile ."
                     }
             }
         }
@@ -78,7 +78,7 @@ pipeline {
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
                    sh 'docker login -u ashutandle -p ${dockerhubpwd}'}
-                   sh 'docker push ashutandle/ekart:latest'
+                   sh 'docker push ashutandle/VFM-Lucid:latest'
                 }
             }
         }
