@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/ashutandle/Ekart.git'
+                git branch: 'master', url: 'https://github.com/ashutandle/vfm-lucid.git'
             }
         }
 
